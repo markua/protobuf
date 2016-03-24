@@ -5,7 +5,7 @@
 #include <iostream>
 #include <sstream>
 #include <vector>
-#include <tr1/unordered_map>
+#include <unordered_map>
 
 #include <google/protobuf/compiler/command_line_interface.h>
 #include <google/protobuf/compiler/code_generator.h>
@@ -38,7 +38,7 @@ class LIBPROTOC_EXPORT RubyGenerator : public CodeGenerator {
 		mutable const FileDescriptor* file_;
 		mutable string filename;
 		mutable vector<string> ns_vector;
-    mutable tr1::unordered_map<string, vector<const FieldDescriptor*> > extended_messages;
+    mutable unordered_map<string, vector<const FieldDescriptor*> > extended_messages;
 
 		GOOGLE_DISALLOW_EVIL_CONSTRUCTORS(RubyGenerator);
 

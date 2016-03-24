@@ -432,7 +432,7 @@ void RubyGenerator::PrintDanglingExtendedMessages() const {
   if (extended_messages.size() > 0) {
     PrintComment("Extended Messages", true);
 
-    tr1::unordered_map<string, vector<const FieldDescriptor*> >::iterator it;
+    unordered_map<string, vector<const FieldDescriptor*> >::iterator it;
     for (it = extended_messages.begin(); it != extended_messages.end(); ++it ) {
       map<string,string> data;
       data["class_name"] = Constantize(it->first);
